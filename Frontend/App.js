@@ -17,8 +17,8 @@ export default function App() {
         <Stack.Screen name='Home' component={HomeScreen} options={{animation:'slide_from_bottom'}}/>
         <Stack.Screen name='Login' component={LoginScreen} options={{animation:'slide_from_left'}}/>
         <Stack.Screen name='Subject' component={SubjectScreen} options={{animation:'slide_from_right'}}/>
-        <Stack.Screen name='NotePDF' component={NotePDFScreen} options={{animation:'slide_from_right'}}/>
-        <Stack.Screen name='NoteVideo' component={NoteVideoScreen} options={{animation:'slide_from_right'}}/>
+        <Stack.Screen name='Notes' component={NotePDFScreen} options={{animation:'slide_from_bottom'}}/>
+        <Stack.Screen name='Video' component={NoteVideoScreen} options={{animation:'slide_from_bottom'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

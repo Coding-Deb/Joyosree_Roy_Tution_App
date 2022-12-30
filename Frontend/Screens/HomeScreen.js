@@ -7,8 +7,9 @@ const height = Dimensions.get('window').height
 
 import TopicsApi from '../Apis/TopicsApi'
 
-import { MaterialIcons } from '@expo/vector-icons';
+// import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import Header from '../Componennts/Header'
 // import { FontAwesome } from '@expo/vector-icons';
 
 export default function HomeScreen() {
@@ -16,7 +17,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <View style={{ height: height, width: width }}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 40, marginLeft: 12 }}>
+        {/* <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 40, marginLeft: 12 }}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Image
               source={require('../assets/LoginPage/Cartoon.jpg')}
@@ -29,8 +30,14 @@ export default function HomeScreen() {
           <TouchableOpacity style={{ alignItems: 'center', left: 130, width: 50 }} onPress={() => navigation.navigate('Login')}>
             <MaterialIcons name="logout" size={27} color="black" />
           </TouchableOpacity>
+        </View> */}
+        <Header/>
+        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'stretch',marginTop:40 }}>
+          <Text style={{ fontSize: 22, fontWeight: '600' }}>
+            Welcome To Joyosree Roy Coaching
+          </Text>
         </View>
-        <View style={{ margin: 15, marginTop: 55, marginBottom: 55 }}>
+        <View style={{ margin: 15, marginTop: 75, marginBottom: 55 }}>
           <Text style={{ fontSize: 22, fontWeight: '600' }}>
             Our Topics
           </Text>
@@ -41,7 +48,7 @@ export default function HomeScreen() {
             renderItem={({ item }) => {
               return (
                 <TouchableOpacity onPress={() => { navigation.navigate('Subject', { Name: item.name }) }}>
-                  <View style={{ backgroundColor: 'white', width: 1 / 2 * width - 30, height: 100, borderRadius: 30, margin: 15, alignItems: 'center', justifyContent: 'space-around' }}>
+                  <View style={{ backgroundColor: 'white', width: 1 / 2 * width - 30, height: 100, borderRadius: 30, margin: 15, alignItems: 'center', justifyContent: 'space-around' ,marginTop:60}}>
                     <Text style={{ fontSize: 14, fontWeight: '700', margin: 15 }}>
                       {item.name}
                     </Text>
@@ -51,11 +58,6 @@ export default function HomeScreen() {
               )
             }}
           />
-        </View>
-        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'stretch' }}>
-          <Text style={{ fontSize: 18, fontWeight: '600' }}>
-            Welcome To Joyosree Roy Coaching Center
-          </Text>
         </View>
       </View>
     </View>
