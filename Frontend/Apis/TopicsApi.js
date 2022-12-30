@@ -4,7 +4,7 @@ const TopicsApi = [
         name: "Embedded System (ES)"
     },
     {
-        id: 2,
+        id: 2, 
         name: "Indrustial Electronics (IE)"
     },
     {

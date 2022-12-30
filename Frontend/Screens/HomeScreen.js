@@ -9,7 +9,7 @@ import TopicsApi from '../Apis/TopicsApi'
 
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
+// import { FontAwesome } from '@expo/vector-icons';
 
 export default function HomeScreen() {
   const navigation = useNavigation()
@@ -40,12 +40,13 @@ export default function HomeScreen() {
             columnWrapperStyle={{ justifyContent: 'center' }}
             renderItem={({ item }) => {
               return (
-                <TouchableOpacity onPress={()=>{navigation.navigate('Subject')}}>
-                  <View style={{ backgroundColor: 'white', width: 1 / 2 * width - 40, height: 100, borderRadius: 30, margin: 15, alignItems: 'center', justifyContent: 'space-around', flexDirection: 'row', }}>
-                    <Text style={{ fontSize: 20, fontWeight: '700', margin: 15 }}>
+                <TouchableOpacity onPress={() => { navigation.navigate('Subject') }}>
+                  <View style={{ backgroundColor: 'white', width: 1 / 2 * width - 30, height: 100, borderRadius: 30, margin: 15, alignItems: 'center', justifyContent: 'space-around' }}>
+                    <Text style={{ fontSize: 14, fontWeight: '700', margin: 15 }}>
                       {item.name}
                     </Text>
-                    <FontAwesome name="chevron-right" size={26} color="black" style={{ margin: 15 }} />
+                    <AntDesign name="arrowright" size={28} color="black" style={{ margin: 15 }} />
+                    {/* <FontAwesome name="chevron-right" size={26} color="black" style={{ margin: 15 }} /> */}
                   </View>
                 </TouchableOpacity>
               )
