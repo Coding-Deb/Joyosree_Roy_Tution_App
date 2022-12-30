@@ -40,13 +40,12 @@ export default function HomeScreen() {
             columnWrapperStyle={{ justifyContent: 'center' }}
             renderItem={({ item }) => {
               return (
-                <TouchableOpacity onPress={() => { navigation.navigate('Subject') }}>
+                <TouchableOpacity onPress={() => { navigation.navigate('Subject', { Name: item.name }) }}>
                   <View style={{ backgroundColor: 'white', width: 1 / 2 * width - 30, height: 100, borderRadius: 30, margin: 15, alignItems: 'center', justifyContent: 'space-around' }}>
                     <Text style={{ fontSize: 14, fontWeight: '700', margin: 15 }}>
                       {item.name}
                     </Text>
                     <AntDesign name="arrowright" size={28} color="black" style={{ margin: 15 }} />
-                    {/* <FontAwesome name="chevron-right" size={26} color="black" style={{ margin: 15 }} /> */}
                   </View>
                 </TouchableOpacity>
               )

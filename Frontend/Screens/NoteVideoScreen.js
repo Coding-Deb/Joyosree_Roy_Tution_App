@@ -1,12 +1,10 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { useRoute } from '@react-navigation/native'
 
-export default function SubjectScreen() {
-   const Route = useRoute()
+export default function NoteVideoScreen() {
   return (
     <View style={styles.container}>
-      <Text>{Route.params.Name}</Text>
+      <Text>NoteVideoScreen</Text>
     </View>
   )
 }
