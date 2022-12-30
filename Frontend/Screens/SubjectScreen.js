@@ -5,11 +5,6 @@ export default function SubjectScreen({navigation}) {
   return (
     <View style={styles.container}>
       <Text>SubjectScreen</Text>
-      <TouchableOpacity onPress={()=>navigation.navigate('Login')}>
-        <Text>
-            Login
-        </Text>
-      </TouchableOpacity>
     </View>
   )
 }

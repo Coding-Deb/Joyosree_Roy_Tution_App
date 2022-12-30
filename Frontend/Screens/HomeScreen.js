@@ -1,11 +1,15 @@
-import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Dimensions, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
+import TopicsApi from '../Apis/TopicsApi'
+
 import { MaterialIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function HomeScreen() {
   const navigation = useNavigation()
@@ -26,17 +30,32 @@ export default function HomeScreen() {
             <MaterialIcons name="logout" size={27} color="black" />
           </TouchableOpacity>
         </View>
-        <View style={{ margin: 15 }}>
+        <View style={{ margin: 15, marginTop: 55, marginBottom: 55 }}>
           <Text style={{ fontSize: 22, fontWeight: '600' }}>
             Our Topics
           </Text>
+          <FlatList
+            data={TopicsApi}
+            numColumns={2}
+            columnWrapperStyle={{ justifyContent: 'center' }}
+            renderItem={({ item }) => {
+              return (
+                <TouchableOpacity onPress={()=>{navigation.navigate('Subject')}}>
+                  <View style={{ backgroundColor: 'white', width: 1 / 2 * width - 40, height: 100, borderRadius: 30, margin: 15, alignItems: 'center', justifyContent: 'space-around', flexDirection: 'row', }}>
+                    <Text style={{ fontSize: 20, fontWeight: '700', margin: 15 }}>
+                      {item.name}
+                    </Text>
+                    <FontAwesome name="chevron-right" size={26} color="black" style={{ margin: 15 }} />
+                  </View>
+                </TouchableOpacity>
+              )
+            }}
+          />
         </View>
-        <View>
-           <TouchableOpacity style={{justifyContent:'center',alignItems:'center',backgroundColor:'white',height:130,width:180,margin:15,borderRadius:30}}>
-            <Text>
-              IOT
-            </Text>
-           </TouchableOpacity>
+        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'stretch' }}>
+          <Text style={{ fontSize: 18, fontWeight: '600' }}>
+            Welcome To Joyosree Roy Coaching Center
+          </Text>
         </View>
       </View>
     </View>
