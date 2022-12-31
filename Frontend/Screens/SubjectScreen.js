@@ -16,8 +16,8 @@ export default function SubjectScreen() {
         <View style={{alignItems:'center',justifyContent:'center'}}>
           <Text style={{ fontSize: 22, fontWeight: '800',marginBottom:25 }}>{Route.params.Name}</Text>
           <Image
-          source={require('../assets/LoginPage/Cartoon.jpg')}
-          style={{width: width-50}}
+          source={require('../assets/LoginPage/LOGO.png')}
+          style={{width: width-70,height:220}}
           resizeMode='stretch'
           />
         </View>

@@ -17,20 +17,6 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <View style={{ height: height, width: width }}>
-        {/* <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 40, marginLeft: 12 }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <Image
-              source={require('../assets/LoginPage/Cartoon.jpg')}
-              style={{ height: 50, width: 50, borderRadius: 50, marginRight: 3 }}
-            />
-            <Text style={{ fontSize: 22, fontWeight: '600', marginLeft: 3 }}>
-              Joyosree Roy
-            </Text>
-          </View>
-          <TouchableOpacity style={{ alignItems: 'center', left: 130, width: 50 }} onPress={() => navigation.navigate('Login')}>
-            <MaterialIcons name="logout" size={27} color="black" />
-          </TouchableOpacity>
-        </View> */}
         <Header/>
         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'stretch',marginTop:40 }}>
           <Text style={{ fontSize: 22, fontWeight: '600' }}>

@@ -23,9 +23,9 @@ export default function LoginScreen() {
                         resizeMode='contain'
                     />
                     <Image
-                        source={require('../assets/LoginPage/Cartoon.jpg')}
-                        style={{ height: 120, width: 120 }}
-                        resizeMode='center'
+                        source={require('../assets/LoginPage/LOGO.png')}
+                        style={{ height: 130, width: 150 }}
+                        resizeMode='stretch'
                     />
                 </View>
                 <View style={{bottom:50}}>

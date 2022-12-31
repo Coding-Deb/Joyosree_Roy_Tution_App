@@ -10,7 +10,7 @@ export default function Header() {
         <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 40, marginLeft: 12 }}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image
-                    source={require('../assets/LoginPage/Cartoon.jpg')}
+                    source={require('../assets/LoginPage/LOGO.png')}
                     style={{ height: 50, width: 50, borderRadius: 50, marginRight: 3 }}
                 />
                 <Text style={{ fontSize: 22, fontWeight: '600', marginLeft: 3 }}>
