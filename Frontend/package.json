@@ -15,7 +15,10 @@
     "expo": "~47.0.9",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",
-    "react-native": "0.70.5"
+    "react-native": "0.70.5",
+    "react-native-openanything": "^0.0.6",
+    "react-native-view-pdf": "^0.14.0",
+    "react-native-webview": "^11.26.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

@@ -4,6 +4,10 @@ import React from 'react'
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
+// import * as OpenAnything from 'react-native-openanything'
+// import { WebView } from 'react-native-webview'
+
+
 import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function NotePDFScreen() {
@@ -17,7 +21,7 @@ export default function NotePDFScreen() {
           <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <FontAwesome5 name="file-pdf" size={40} color="#D22B2B" style={{ margin: 15 }} />
           </View>
-          <TouchableOpacity style={{ justifyContent: 'center',width:width-20}}>
+          <TouchableOpacity style={{ justifyContent: 'center', width: width - 20 }} >
             <View>
               <Text style={{ fontSize: 18, fontWeight: '600', }}>
                 All Chapters
@@ -25,6 +29,7 @@ export default function NotePDFScreen() {
             </View>
           </TouchableOpacity>
         </View>
+
       </View>
     </View>
   )
